@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Code, Github, Linkedin, Mail, Monitor, User } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -9,10 +10,10 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur-sm dark:bg-zinc-950/80 dark:border-zinc-800">
+      <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur-sm dark:bg-zinc-950/80 dark:border-zinc-800 px-4">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="font-bold text-xl">
-            <span className="text-primary">Dev</span>Portfolio
+            <span className="text-primary">Randal Dev</span>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="#proyectos" className="text-sm font-medium hover:text-primary transition-colors">
@@ -61,12 +62,16 @@ export default function Portfolio() {
               </Button>
             </div>
           </div>
-          <div className="relative mx-auto aspect-video max-w-4xl overflow-hidden rounded-xl border bg-muted/50">
-            <img
-              src="/placeholder.svg?height=720&width=1280"
-              alt="Vista previa de proyecto destacado"
-              className="object-cover w-full h-full"
-            />
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-xl border bg-muted/50 mt-20">
+            <Link href="https://www.prolimk.com.mx" className="block" target="_blank">
+              <Image
+                width={2000}
+                height={1050}
+                src="/proyecto-destacado.webp"
+                alt="Vista previa de proyecto destacado"
+                className="h-full w-full object-contain"
+              />
+            </Link>
           </div>
         </section>
 
