@@ -8,44 +8,53 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950">
+    <div className="min-h-screen bg-[#23252b]">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur-sm dark:bg-zinc-950/80 dark:border-zinc-800 px-4">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="font-bold text-xl">
-            <span className="text-primary">Randal Dev</span>
+        <header className="sticky top-0 z-40 w-full border-b bg-[#23252b]/80 backdrop-blur-sm px-4">
+          <div className="container flex h-16 items-center justify-between">
+            <Link href="/" className="font-bold text-xl">
+          <span className="text-white">Randal Dev</span>
+            </Link>
+            <nav className="hidden md:flex gap-6">
+          <Link
+            href="#proyectos"
+            className="text-sm font-medium text-white transition-transform hover:scale-110"
+          >
+            Proyectos
           </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#proyectos" className="text-sm font-medium hover:text-primary transition-colors">
-              Proyectos
-            </Link>
-            <Link href="#habilidades" className="text-sm font-medium hover:text-primary transition-colors">
-              Habilidades
-            </Link>
-            <Link href="#sobre-mi" className="text-sm font-medium hover:text-primary transition-colors">
-              Sobre mí
-            </Link>
-            <Link href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
-              Contacto
-            </Link>
-          </nav>
-          <Button variant="outline" size="sm" className="hidden md:flex">
-            Descargar CV
-          </Button>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <User className="h-4 w-4" />
-            <span className="sr-only">Menú</span>
-          </Button>
-        </div>
-      </header>
+          <Link
+            href="#habilidades"
+            className="text-sm font-medium text-white transition-transform hover:scale-110"
+          >
+            Habilidades
+          </Link>
+          <Link
+            href="#sobre-mi"
+            className="text-sm font-medium text-white transition-transform hover:scale-110"
+          >
+            Sobre mí
+          </Link>
+          <Link
+            href="#contacto"
+            className="text-sm font-medium text-white transition-transform hover:scale-110"
+          >
+            Contacto
+          </Link>
+            </nav>
+            <Button variant="outline" size="sm" className="hidden md:flex">
+          Descargar CV
+            </Button>
+            <Button variant="outline" size="icon" className="md:hidden">
+          <User className="h-4 w-4" />
+          <span className="sr-only">Menú</span>
+            </Button>
+          </div>
+        </header>
 
-      <main>
-        {/* Hero Section */}
+        <main>
+          {/* Hero Section */}
         <section className="container py-24 md:py-32 space-y-8">
           <div className="flex flex-col items-center text-center space-y-4">
-            <div className="inline-block rounded-full bg-primary/10 px-3 py-1 text-sm text-primary">
-              Desarrollador Web Full Stack
-            </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter max-w-3xl">
               Creando experiencias digitales <span className="text-primary">excepcionales</span>
             </h1>
@@ -76,7 +85,7 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section */}
-        <section id="proyectos" className="bg-muted/50 py-20">
+        <section id="proyectos" className="bg-muted/50 py-20 px-10">
           <div className="container space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Proyectos Destacados</h2>
