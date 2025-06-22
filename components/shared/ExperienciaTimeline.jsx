@@ -17,13 +17,15 @@ export default function ExperienciaTimeline() {
                         <div className="space-y-12">
                             {[
                                 {
-                                    year: "2024",
-                                    title: "Senior Full Stack Developer",
-                                    description: "Liderando proyectos complejos y mentoring",
+                                    year: "Junio 2024 - Agosto 2024",
+                                    title: "Internship Web Developer - Mondasi",
+                                    description: "Desarrollo de Landings Page con Next.js y supabase",
                                 },
-                                { year: "2022", title: "Full Stack Developer", description: "Dominio completo del stack MERN" },
-                                { year: "2020", title: "Frontend Developer", description: "Especialización en React y TypeScript" },
-                                { year: "2019", title: "Junior Developer", description: "Primeros pasos en desarrollo web" },
+                                {
+                                    year: "Diciembre 2024 - Actualidad",
+                                    title: "Junior Developer - Psicosmart",
+                                    description: "Desarrollo web con PHP, optimización de SEO y manejo de APIs"
+                                },
                             ].map((item, index) => (
                                 <FadeIn key={item.year} delay={0.1 * index}>
                                     <div className={`flex items-center ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
