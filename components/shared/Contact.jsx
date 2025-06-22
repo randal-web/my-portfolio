@@ -30,7 +30,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h3 className="font-medium">Email</h3>
-                                <p className="text-sm text-muted-foreground">contacto@tudominio.com</p>
+                                <a href="mailto:randal.rmz@outlook.com" className="text-sm text-muted-foreground">randal.rmz@outlook.com</a>
                             </div>
                         </div>
                     </StaggerItem>
@@ -42,7 +42,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h3 className="font-medium">LinkedIn</h3>
-                                <p className="text-sm text-muted-foreground">linkedin.com/in/tunombre</p>
+                                <a href="https://linkedin.com/in/randaledin" target="_blank" className="text-sm text-muted-foreground">linkedin.com/in/randaledin</a>
                             </div>
                         </div>
                     </StaggerItem>
@@ -54,20 +54,20 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h3 className="font-medium">GitHub</h3>
-                                <p className="text-sm text-muted-foreground">github.com/tunombre</p>
+                                <a href="https://github.com/randal-web" target="_blank" className="text-sm text-muted-foreground">github.com/randal-web</a>
                             </div>
                         </div>
                     </StaggerItem>
                 </StaggerChildren>
 
-                <AnimatedSection delay={0.6}>
+                {/* <AnimatedSection delay={0.6}>
                     <div className="flex justify-center">
                         <Button size="lg" className="group">
                             Enviar mensaje
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </div>
-                </AnimatedSection>
+                </AnimatedSection> */}
             </div>
         </section>
     )

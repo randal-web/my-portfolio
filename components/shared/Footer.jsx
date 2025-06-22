@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Github } from "lucide-react"
 import { Linkedin } from "lucide-react"
 import { Mail } from "lucide-react"
-
+import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer className="border-t bg-white dark:bg-zinc-950 dark:border-zinc-800">
+        <footer className="border-t bg-white dark:bg-zinc-950 dark:border-zinc-800 pl-10 pr-10">
             <div className="container py-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -25,16 +25,22 @@ export default function Footer() {
                     </div>
                     <div className="flex gap-4">
                         <Button variant="ghost" size="icon">
-                            <Github className="h-4 w-4" />
-                            <span className="sr-only">GitHub</span>
+                            <Link href="https://github.com/randal-web" target="_blank">
+                                <Github className="h-4 w-4" />
+                                <span className="sr-only">GitHub</span>
+                            </Link>
                         </Button>
                         <Button variant="ghost" size="icon">
-                            <Linkedin className="h-4 w-4" />
-                            <span className="sr-only">LinkedIn</span>
+                            <Link href="https://linkedin.com/in/randaledin" target="_blank">
+                                <Linkedin className="h-4 w-4" />
+                                <span className="sr-only">LinkedIn</span>
+                            </Link>
                         </Button>
                         <Button variant="ghost" size="icon">
-                            <Mail className="h-4 w-4" />
-                            <span className="sr-only">Email</span>
+                            <Link href="mailto:randal.rmz@outlook.com" target="_blank">
+                                <Mail className="h-4 w-4" />
+                                <span className="sr-only">Email</span>
+                            </Link>
                         </Button>
                     </div>
                 </motion.div>
