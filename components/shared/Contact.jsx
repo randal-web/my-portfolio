@@ -61,7 +61,7 @@ export default function Contact() {
                 </StaggerChildren>
 
                 <div className="text-center text-sm text-muted-foreground mt-12">
-                    <p>&copy; {new Date().getFullYear()} Randal Vargas. Todos los derechos reservados.</p>
+                    <p>&copy; {new Date().getFullYear()} Randal. Todos los derechos reservados.</p>
                 </div>
             </div>
         </section>
