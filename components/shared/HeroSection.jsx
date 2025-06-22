@@ -5,11 +5,11 @@ import { motion } from "framer-motion"
 import { Mail } from "lucide-react"
 import { Code } from "lucide-react"
 import { Github } from "lucide-react"
-
+import Link from "next/link"
 
 export default function HeroSection() {
     return (
-        <section className="relative container py-20 md:py-32 overflow-hidden">
+        <section className="relative container py-20 md:py-32 overflow-hidden pl-10 pr-10 mb-20">
             {/* Background Pattern */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
@@ -20,21 +20,12 @@ export default function HeroSection() {
             <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
                 {/* Left Content */}
                 <div className="space-y-8 lg:pr-8">
-                    <FadeIn>
-                        <div className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                            <span className="text-sm font-medium text-primary uppercase tracking-wider">
-                                Disponible para proyectos
-                            </span>
-                        </div>
-                    </FadeIn>
-
                     <div className="space-y-6">
                         <FadeIn delay={0.1}>
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none">
                                 Hola, soy{" "}
                                 <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                                    Alex
+                                    Randal
                                 </span>
                             </h1>
                         </FadeIn>
@@ -42,7 +33,7 @@ export default function HeroSection() {
                         <FadeIn delay={0.2}>
                             <div className="space-y-2">
                                 <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
-                                    Desarrollador Full Stack
+                                    Desarrollador de Software
                                 </h2>
                                 <div className="flex items-center gap-2 text-lg text-muted-foreground">
                                     <span>Especializado en</span>
@@ -52,7 +43,7 @@ export default function HeroSection() {
                                             Next.js
                                         </span>
                                         <span className="px-2 py-1 bg-primary/10 text-primary rounded text-sm font-medium">
-                                            Node.js
+                                            Java - Springboot
                                         </span>
                                     </div>
                                 </div>
@@ -61,8 +52,7 @@ export default function HeroSection() {
 
                         <FadeIn delay={0.3}>
                             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                                Transformo ideas en experiencias digitales excepcionales. Con más de 5 años creando aplicaciones web
-                                modernas, rápidas y escalables.
+                                Transformo ideas en experiencias digitales excepcionales. Con mas de 1 año de experiencia en creando aplicaciones web modernas, rápidas y escalables.
                             </p>
                         </FadeIn>
                     </div>
@@ -75,21 +65,8 @@ export default function HeroSection() {
                             </Button>
                             <Button size="lg" variant="outline" className="text-base px-8 py-6">
                                 <Mail className="mr-2 h-5 w-5" />
-                                Contactar
+                                Contactarme
                             </Button>
-                        </div>
-                    </FadeIn>
-
-                    <FadeIn delay={0.5}>
-                        <div className="flex items-center gap-6 pt-4">
-                            <div className="flex items-center gap-2">
-                                <div className="flex -space-x-2">
-                                    <div className="w-8 h-8 rounded-full bg-primary/20 border-2 border-white"></div>
-                                    <div className="w-8 h-8 rounded-full bg-primary/40 border-2 border-white"></div>
-                                    <div className="w-8 h-8 rounded-full bg-primary/60 border-2 border-white"></div>
-                                </div>
-                                <span className="text-sm text-muted-foreground">+50 proyectos completados</span>
-                            </div>
                         </div>
                     </FadeIn>
                 </div>
@@ -104,7 +81,7 @@ export default function HeroSection() {
                                 <div className="absolute inset-0 bg-gradient-to-tl from-primary/10 to-transparent rounded-3xl transform -rotate-3"></div>
                                 <div className="relative bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-2xl border">
                                     <img
-                                        src="/placeholder.svg?height=400&width=400&text=Tu+Foto"
+                                        src="/Selfie.jpg?height=400&width=400&text=Tu+Foto"
                                         alt="Foto de perfil"
                                         className="w-full h-full object-cover rounded-2xl"
                                     />
@@ -130,43 +107,43 @@ export default function HeroSection() {
                             >
                                 <div className="flex items-center gap-2">
                                     <Code className="w-4 h-4 text-primary" />
-                                    <span className="text-sm font-medium">5+ años</span>
+                                    <span className="text-sm font-medium">+1 año</span>
                                 </div>
                             </motion.div>
-
-                            <motion.div
-                                animate={{ rotate: [0, 5, 0] }}
-                                transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-                                className="absolute top-1/2 -right-8 bg-primary text-primary-foreground rounded-full p-3 shadow-lg"
-                            >
-                                <Github className="w-5 h-5" />
-                            </motion.div>
+                            <Link href="https://github.com/randal-web" target="_blank">
+                                <motion.div
+                                    animate={{ rotate: [0, 5, 0] }}
+                                    transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+                                    className="absolute top-1/2 -right-8 bg-primary text-primary-foreground rounded-full p-3 shadow-lg">
+                                    <Github className="w-5 h-5" />
+                                </motion.div>
+                            </Link>
                         </div>
                     </FadeIn>
                 </div>
             </div>
 
             {/* Stats Section */}
-            <FadeIn delay={0.8}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t">
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">50+</div>
-                        <div className="text-sm text-muted-foreground mt-1">Proyectos</div>
+            {/* <FadeIn delay={0.8}>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t">
+                        <div className="text-center">
+                            <div className="text-3xl font-bold text-primary">50+</div>
+                            <div className="text-sm text-muted-foreground mt-1">Proyectos</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-3xl font-bold text-primary">5+</div>
+                            <div className="text-sm text-muted-foreground mt-1">Años experiencia</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-3xl font-bold text-primary">20+</div>
+                            <div className="text-sm text-muted-foreground mt-1">Clientes felices</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-3xl font-bold text-primary">100%</div>
+                            <div className="text-sm text-muted-foreground mt-1">Satisfacción</div>
+                        </div>
                     </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">5+</div>
-                        <div className="text-sm text-muted-foreground mt-1">Años experiencia</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">20+</div>
-                        <div className="text-sm text-muted-foreground mt-1">Clientes felices</div>
-                    </div>
-                    <div className="text-center">
-                        <div className="text-3xl font-bold text-primary">100%</div>
-                        <div className="text-sm text-muted-foreground mt-1">Satisfacción</div>
-                    </div>
-                </div>
-            </FadeIn>
+                </FadeIn> */}
         </section>
     )
 }
