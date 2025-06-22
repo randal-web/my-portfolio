@@ -44,14 +44,12 @@ export default function Projects() {
     return (
         <section id="proyectos" className="bg-muted/50 py-20 pl-10 pr-10">
             <div className="container space-y-12">
-                <AnimatedSection>
-                    <div className="text-center space-y-4">
-                        <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Proyectos Destacados</h2>
-                        <p className="text-muted-foreground max-w-[600px] mx-auto">
-                            Una selección de mis trabajos más recientes y relevantes en desarrollo web
-                        </p>
-                    </div>
-                </AnimatedSection>
+                <div className="text-center space-y-4">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Proyectos Destacados</h2>
+                    <p className="text-muted-foreground max-w-[600px] mx-auto">
+                        Una selección de mis trabajos más recientes y relevantes en desarrollo web
+                    </p>
+                </div>
 
                 <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projectsData.map((project) => (

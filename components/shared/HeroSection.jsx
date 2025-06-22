@@ -10,7 +10,6 @@ import Link from "next/link"
 export default function HeroSection() {
     return (
         <section className="relative container py-20 md:py-32 overflow-hidden pl-10 pr-10 mb-20">
-            {/* Background Pattern */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/3 rounded-full blur-3xl"></div>
@@ -18,12 +17,11 @@ export default function HeroSection() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-                {/* Left Content */}
                 <div className="space-y-8 lg:pr-8">
                     <div className="space-y-6">
                         <FadeIn delay={0.1}>
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none">
-                                Hola, soy{" "}
+                                Hola, soy 
                                 <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                                     Randal
                                 </span>
@@ -71,11 +69,9 @@ export default function HeroSection() {
                     </FadeIn>
                 </div>
 
-                {/* Right Content */}
                 <div className="relative lg:pl-8">
                     <FadeIn delay={0.6} direction="right">
                         <div className="relative">
-                            {/* Main Image Container */}
                             <div className="relative aspect-square max-w-lg mx-auto">
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl transform rotate-6"></div>
                                 <div className="absolute inset-0 bg-gradient-to-tl from-primary/10 to-transparent rounded-3xl transform -rotate-3"></div>
@@ -88,7 +84,6 @@ export default function HeroSection() {
                                 </div>
                             </div>
 
-                            {/* Floating Elements */}
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
@@ -114,7 +109,8 @@ export default function HeroSection() {
                                 <motion.div
                                     animate={{ rotate: [0, 5, 0] }}
                                     transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-                                    className="absolute top-1/2 -right-8 bg-primary text-primary-foreground rounded-full p-3 shadow-lg">
+                                    className="absolute top-1/2 -right-8 bg-primary text-primary-foreground rounded-full p-3 shadow-lg"
+                                >
                                     <Github className="w-5 h-5" />
                                 </motion.div>
                             </Link>
@@ -123,27 +119,30 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {/* Stats Section */}
-            {/* <FadeIn delay={0.8}>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t">
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-primary">50+</div>
-                            <div className="text-sm text-muted-foreground mt-1">Proyectos</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-primary">5+</div>
-                            <div className="text-sm text-muted-foreground mt-1">Años experiencia</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-primary">20+</div>
-                            <div className="text-sm text-muted-foreground mt-1">Clientes felices</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-3xl font-bold text-primary">100%</div>
-                            <div className="text-sm text-muted-foreground mt-1">Satisfacción</div>
+            <div className="absolute bottom-0 left-0 right-0 z-20 pb-8">
+                <div className="container mx-auto px-4 md:px-6">
+                    <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-primary/10">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-primary">50+</div>
+                                <div className="text-sm text-muted-foreground mt-1">Proyectos</div>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-primary">5+</div>
+                                <div className="text-sm text-muted-foreground mt-1">Años experiencia</div>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-primary">20+</div>
+                                <div className="text-sm text-muted-foreground mt-1">Clientes felices</div>
+                            </div>
+                            <div className="text-center">
+                                <div className="text-3xl font-bold text-primary">100%</div>
+                                <div className="text-sm text-muted-foreground mt-1">Satisfacción</div>
+                            </div>
                         </div>
                     </div>
-                </FadeIn> */}
+                </div>
+            </div>
         </section>
     )
 }

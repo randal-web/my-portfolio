@@ -60,14 +60,9 @@ export default function Contact() {
                     </StaggerItem>
                 </StaggerChildren>
 
-                {/* <AnimatedSection delay={0.6}>
-                    <div className="flex justify-center">
-                        <Button size="lg" className="group">
-                            Enviar mensaje
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Button>
-                    </div>
-                </AnimatedSection> */}
+                <div className="text-center text-sm text-muted-foreground mt-12">
+                    <p>&copy; {new Date().getFullYear()} Randal Vargas. Todos los derechos reservados.</p>
+                </div>
             </div>
         </section>
     )

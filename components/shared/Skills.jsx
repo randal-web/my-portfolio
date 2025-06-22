@@ -17,9 +17,7 @@ export default function Skills() {
                     </div>
                 </AnimatedSection>
 
-                {/* Technologies Grid */}
                 <div className="space-y-12">
-                    {/* Frontend */}
                     <AnimatedSection delay={0.1}>
                         <div className="space-y-8">
                             <div className="text-center">
@@ -53,7 +51,6 @@ export default function Skills() {
                         </div>
                     </AnimatedSection>
 
-                    {/* Backend */}
                     <AnimatedSection delay={0.2}>
                         <div className="space-y-8">
                             <div className="text-center">
