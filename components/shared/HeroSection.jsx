@@ -21,7 +21,7 @@ export default function HeroSection() {
                     <div className="space-y-6">
                         <FadeIn delay={0.1}>
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none">
-                                Hola, soy 
+                                Hola, soy
                                 <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                                     Randal
                                 </span>
@@ -116,31 +116,6 @@ export default function HeroSection() {
                             </Link>
                         </div>
                     </FadeIn>
-                </div>
-            </div>
-
-            <div className="absolute bottom-0 left-0 right-0 z-20 pb-8">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm rounded-xl shadow-lg p-4 border border-primary/10">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-primary">50+</div>
-                                <div className="text-sm text-muted-foreground mt-1">Proyectos</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-primary">5+</div>
-                                <div className="text-sm text-muted-foreground mt-1">Años experiencia</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-primary">20+</div>
-                                <div className="text-sm text-muted-foreground mt-1">Clientes felices</div>
-                            </div>
-                            <div className="text-center">
-                                <div className="text-3xl font-bold text-primary">100%</div>
-                                <div className="text-sm text-muted-foreground mt-1">Satisfacción</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
