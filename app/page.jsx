@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AnimatedSection } from "@/components/animated-section"
 import { FadeIn } from "@/components/fade-in"
 import { StaggerChildren } from "@/components/stagger-children"
@@ -214,6 +213,48 @@ export default function Portfolio() {
           </FadeIn>
         </section>
 
+        {/* Experience Timeline Section */}
+        <section className="bg-muted/50 py-20">
+          <div className="container">
+            <AnimatedSection>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-2">Mi Trayectoria</h2>
+                <p className="text-muted-foreground">Evolución de mis habilidades a lo largo del tiempo</p>
+              </div>
+
+              <div className="relative max-w-4xl mx-auto">
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
+
+                <div className="space-y-12">
+                  {[
+                    {
+                      year: "2024",
+                      title: "Senior Full Stack Developer",
+                      description: "Liderando proyectos complejos y mentoring",
+                    },
+                    { year: "2022", title: "Full Stack Developer", description: "Dominio completo del stack MERN" },
+                    { year: "2020", title: "Frontend Developer", description: "Especialización en React y TypeScript" },
+                    { year: "2019", title: "Junior Developer", description: "Primeros pasos en desarrollo web" },
+                  ].map((item, index) => (
+                    <FadeIn key={item.year} delay={0.1 * index}>
+                      <div className={`flex items-center ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                        <div className={`w-5/12 ${index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"}`}>
+                          <div className="bg-white dark:bg-zinc-900 rounded-xl p-6 border shadow-sm">
+                            <div className="text-primary font-bold text-lg">{item.year}</div>
+                            <div className="font-semibold mb-1">{item.title}</div>
+                            <div className="text-sm text-muted-foreground">{item.description}</div>
+                          </div>
+                        </div>
+                        <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white dark:border-zinc-950"></div>
+                      </div>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section id="proyectos" className="bg-muted/50 py-20">
           <div className="container space-y-12">
@@ -279,7 +320,7 @@ export default function Portfolio() {
 
         {/* Skills Section */}
         <section id="habilidades" className="container py-20">
-          <div className="space-y-12">
+          <div className="space-y-16">
             <AnimatedSection>
               <div className="text-center space-y-4">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Mis Habilidades</h2>
@@ -289,75 +330,62 @@ export default function Portfolio() {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <Tabs defaultValue="frontend" className="max-w-3xl mx-auto">
-                <TabsList className="grid w-full grid-cols-3">
-                  <TabsTrigger value="frontend">Frontend</TabsTrigger>
-                  <TabsTrigger value="backend">Backend</TabsTrigger>
-                  <TabsTrigger value="tools">Herramientas</TabsTrigger>
-                </TabsList>
-                <TabsContent value="frontend" className="mt-6">
-                  <StaggerChildren className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {/* Technologies Grid */}
+            <div className="space-y-12">
+              {/* Frontend */}
+              <AnimatedSection delay={0.1}>
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-center">Frontend</h3>
+                  <StaggerChildren className="flex flex-wrap justify-center gap-4">
                     {[
-                      "HTML/CSS",
-                      "JavaScript",
-                      "TypeScript",
-                      "React",
-                      "Next.js",
-                      "Tailwind CSS",
-                      "Framer Motion",
-                      "Redux",
-                    ].map((skill) => (
-                      <StaggerItem key={skill}>
-                        <div className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card text-card-foreground hover:border-primary/50 transition-all">
-                          <div className="rounded-full bg-primary/10 p-2">
-                            <Code className="h-5 w-5 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-center">{skill}</span>
+                      { name: "HTML/CSS", icon: "🌐" },
+                      { name: "JavaScript", icon: "⚡" },
+                      { name: "TypeScript", icon: "🔷" },
+                      { name: "React", icon: "⚛️" },
+                      { name: "Next.js", icon: "▲" },
+                      { name: "Tailwind CSS", icon: "🎨" },
+                      { name: "Framer Motion", icon: "🎭" },
+                      { name: "Redux", icon: "🔄" },
+                    ].map((tech) => (
+                      <StaggerItem key={tech.name}>
+                        <div className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-zinc-900 rounded-full border hover:border-primary/50 hover:shadow-md transition-all">
+                          <span className="text-lg">{tech.icon}</span>
+                          <span className="font-medium">{tech.name}</span>
                         </div>
                       </StaggerItem>
                     ))}
                   </StaggerChildren>
-                </TabsContent>
-                <TabsContent value="backend" className="mt-6">
-                  <StaggerChildren className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                </div>
+              </AnimatedSection>
+
+              {/* Backend */}
+              <AnimatedSection delay={0.2}>
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-center">Backend</h3>
+                  <StaggerChildren className="flex flex-wrap justify-center gap-4">
                     {[
-                      "Node.js",
-                      "Express",
-                      "MongoDB",
-                      "PostgreSQL",
-                      "Firebase",
-                      "GraphQL",
-                      "REST API",
-                      "Serverless",
-                    ].map((skill) => (
-                      <StaggerItem key={skill}>
-                        <div className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card text-card-foreground hover:border-primary/50 transition-all">
-                          <div className="rounded-full bg-primary/10 p-2">
-                            <Code className="h-5 w-5 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-center">{skill}</span>
+                      { name: "Node.js", icon: "🟢" },
+                      { name: "Express", icon: "🚀" },
+                      { name: "MongoDB", icon: "🍃" },
+                      { name: "PostgreSQL", icon: "🐘" },
+                      { name: "Firebase", icon: "🔥" },
+                      { name: "GraphQL", icon: "📊" },
+                      { name: "REST API", icon: "🔗" },
+                      { name: "Docker", icon: "🐳" },
+                      { name: "AWS", icon: "☁️" },
+                      { name: "Git", icon: "📝" },
+                    ].map((tech) => (
+                      <StaggerItem key={tech.name}>
+                        <div className="flex items-center gap-2 px-4 py-3 bg-white dark:bg-zinc-900 rounded-full border hover:border-primary/50 hover:shadow-md transition-all">
+                          <span className="text-lg">{tech.icon}</span>
+                          <span className="font-medium">{tech.name}</span>
                         </div>
                       </StaggerItem>
                     ))}
                   </StaggerChildren>
-                </TabsContent>
-                <TabsContent value="tools" className="mt-6">
-                  <StaggerChildren className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    {["Git", "GitHub", "VS Code", "Figma", "Docker", "Jest", "Vercel", "AWS"].map((skill) => (
-                      <StaggerItem key={skill}>
-                        <div className="flex flex-col items-center gap-2 p-4 rounded-lg border bg-card text-card-foreground hover:border-primary/50 transition-all">
-                          <div className="rounded-full bg-primary/10 p-2">
-                            <Code className="h-5 w-5 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-center">{skill}</span>
-                        </div>
-                      </StaggerItem>
-                    ))}
-                  </StaggerChildren>
-                </TabsContent>
-              </Tabs>
-            </AnimatedSection>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
         </section>
 
