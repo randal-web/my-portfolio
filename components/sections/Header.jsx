@@ -1,10 +1,19 @@
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { User } from 'lucide-react'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-[#23252b]/80 backdrop-blur-sm px-4">
+    <motion.header 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -100, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="sticky top-0 z-40 w-full border-b bg-[#23252b]/80 backdrop-blur-sm px-4"
+    >
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="font-bold text-xl">
           <span className="text-white">Randal Dev</span>
@@ -43,6 +52,6 @@ export default function Header() {
           <span className="sr-only">Menú</span>
         </Button>
       </div>
-    </header>
+    </motion.header>
   )
 }

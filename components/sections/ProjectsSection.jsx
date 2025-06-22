@@ -1,10 +1,11 @@
+import { forwardRef } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Github, Monitor } from "lucide-react"
 
-export default function ProjectsSection() {
+const ProjectsSection = forwardRef((props, ref) => {
   return (
-    <section id="proyectos" className="bg-muted/50 py-20 px-10">
+    <section ref={ref} id="proyectos" className="bg-muted/50 py-20 px-10">
       <div className="container space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">Proyectos Destacados</h2>
@@ -63,4 +64,8 @@ export default function ProjectsSection() {
       </div>
     </section>
   )
-}
+})
+
+ProjectsSection.displayName = "ProjectsSection"
+
+export default ProjectsSection
