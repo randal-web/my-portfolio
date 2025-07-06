@@ -23,7 +23,7 @@ export default function HeroSection() {
                             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none">
                                 Hola, soy{" "}
                                 <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                                    Randal
+                                    Randall
                                 </span>
                             </h1>
                         </FadeIn>
