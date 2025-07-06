@@ -24,7 +24,7 @@ export default function ExperienciaTimeline() {
                                 {
                                     year: "Diciembre 2024 - Actualidad",
                                     title: "Junior Developer - Psicosmart",
-                                    description: "Desarrollo web con PHP, optimización de SEO y manejo de APIs"
+                                    description: "Desarrollo web con PHP, optimización de SEO y manejo de APIs, creacion de vistas para el extranjero"
                                 },
                             ].map((item, index) => (
                                 <FadeIn key={item.year} delay={0.1 * index}>
